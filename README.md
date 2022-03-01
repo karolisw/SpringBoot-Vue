@@ -19,4 +19,4 @@ repo:
 - This means that the interface provides the backend with functionality for db communication such as deleting, saving, updating, storing etc. *without* writing any code (as it extends Jpa)
 
 service:
-- Contains the meat of the backend functionality seen by the frontend, meaning that it does the actual calculation of the expressions to be evaluated.
+- Contains the backend functionality "seen" by the frontend, meaning that it does the actual calculation of the expressions to be evaluated.
