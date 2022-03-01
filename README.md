@@ -1,3 +1,5 @@
+# REST API
+
 This is a REST API (backend) for use alongside Vue Calculator (frontend)
 
 resources/application.properties:
