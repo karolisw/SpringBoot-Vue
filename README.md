@@ -1,4 +1,4 @@
-# calculator-and-backend
+# calculator
 
 ## Project setup
 ```
