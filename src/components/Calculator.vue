@@ -143,16 +143,14 @@ export default {
       }
       this.logList.push(
         // eslint-disable-next-line no-eval
-        this.entireFunction + ' = ' + this.tempFunction
+        // entireFunction = expression
+        // tempFunction = answer
+        this.entireFunction + ' = ' + this.tempFunction // ex => '2 + 2 = 4
       )
-      // TODO 4. Figure out the rest of this logic...
+      // entireFunction = expression
       console.log('entire function 1:' + this.entireFunction) // works
-      // eslint-disable-next-line no-eval
-      // console.log('CalculatorService returns (class): ' + CalculatorService.postExpression(this.entireFunction))
-      // console.log(typeof CalculatorService.postExpression(this.entireFunction))
-      // this.entireFunction = CalculatorService.postExpression(this.entireFunction)
-      // const result = await CalculatorService.postExpression(this.entireFunction)
-      // await this.changeEntireFunction(this.entireFunction)
+
+      // tempFunction = answer
       console.log('entire function 2:' + this.tempFunction) // works!
 
       // here, current function is set to equal the answer
@@ -226,7 +224,7 @@ export default {
 
     changeTempFunction: async function (expression) {
       await api.create(expression)
-        .then(function (response) {
+        .then(function (response) { // response = json object => PROMISE
           const result = response.data.answer
           this.tempFunction = String(result)
         }.bind(this))
